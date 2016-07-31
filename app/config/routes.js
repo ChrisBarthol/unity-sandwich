@@ -3,14 +3,25 @@ var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
-var hashHistory = ReactRoute.hashHistory;
+var hashHistory = ReactRouter.hashHistory;
 var Main = require('../components/Main');
 var Home = require('../components/Home');
+var PromptContainer = require('../containers/PromptContainer');
 
 var routes = (
   <Router history={hashHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={Home} />
+      <Route path='unityName'
+        header='Your Name'
+        placeholderText='Enter Your Name'
+        textType='text'
+        component={PromptContainer} />
+      <Route path='unityThoughts/:unityName'
+        header='Your Thoughts'
+        placeholderText='What are your thoughts?'
+        textType='textarea'
+        component={PromptContainer} />
     </Route>
   </Router>
 );
