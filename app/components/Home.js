@@ -1,14 +1,16 @@
 var React = require('react');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link
-var Header = require('./Header.js')
+var MainSplash = require('./MainSplash.js')
 var transparentBg = require('../styles').transparentBg;
+var $ = require('jQuery');
+
 
 function Home () {
   return (
     <div>
-      <Header />
-      <div className="jumbtotron col-sm-12 text-center" style={transparentBg}>
+      <MainSplash />
+      <div id='next-section' className="jumbtotron col-sm-12 text-center" style={transparentBg}>
         <h1>Unity Sandwich</h1>
         <p className='lead'> Sandwhiches are the best</p>
         <Link to='/unityName'>

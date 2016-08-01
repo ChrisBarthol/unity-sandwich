@@ -5,8 +5,10 @@ var splashContentH1 = require('../styles').splashContentH1
 var splashContentH4 = require('../styles').splashContentH4
 var toVizContainer = require('../styles').toVizContainer
 var nextSection = require('../styles').nextSection
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link
 
-function Header () {
+function MainSplash (props) {
   return (
     <header>
       <section className="splash" style={splash}>
@@ -14,12 +16,12 @@ function Header () {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 id="main-title" className="fadeInDown animated" style={splashContentH1}>Yosemite National Park</h1>
-                <h4 className="fadeInUp animated" style={splashContentH4}>five year weather trends</h4>
+                <h1 id="main-title" className="fadeInDown animated" style={splashContentH1}>Unity Sandwiches</h1>
+                <h4 className="fadeInUp animated" style={splashContentH4}>To have, to hold, and to eat.</h4>
                 <div id="to-viz-container" style={toVizContainer}>
-                  <a id="to-viz" className="next-section hide" href="#viz">
+                  <Link to="next-section">
                     <i className="fa fa-arrow-down" style={nextSection}></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -30,4 +32,4 @@ function Header () {
   )
 }
 
-module.exports = Header
+module.exports = MainSplash
