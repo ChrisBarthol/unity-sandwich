@@ -4,12 +4,14 @@ var Link = ReactRouter.Link
 var MainSplash = require('./MainSplash.js')
 var transparentBg = require('../styles').transparentBg;
 var $ = require('jQuery');
+import Chart from './chart/Chart';
 
 
 function Home () {
   return (
     <div>
       <MainSplash />
+      <Chart />
       <div id='next-section' className="jumbtotron col-sm-12 text-center" style={transparentBg}>
         <h1>Unity Sandwich</h1>
         <p className='lead'> Sandwhiches are the best</p>
