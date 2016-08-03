@@ -1,34 +1,40 @@
 import React, {Component} from 'react';
 import $ from 'jQuery';
 import ChartHeader from './ChartHeader';
-import d3 from 'd3'
-import data from 'dsv!../../img/sanwhich.csv'
+import UserSelect from './UserSelect';
+import BarChart from './BarChart';
+import data from '../../img/sanwhich.csv';
 
 var Chart = React.createClass({
-  getInitialState() {
+  getInitialState () {
     return {
       data: [],
-      selection: 'sandwich_love_perc'
-    };
+      selection: 'avg_temp_f'
+    }
   },
-
-  loadData() {
-    d3.csv(data,function(csv){
-      this.setState({
-        data: csv
-      });
-    }.bind(this));
+  loadData () {
+    this.setState({
+      data: data
+    });
   },
-
   componentDidMount() {
     this.loadData();
   },
-
+  handleUserSelect(e) {
+    var selection = e.target.id;
+    $('#select-text').text(e.target.innerHTML);
+    $('.select').removeClass('current-selection');
+    $('#' + selection).addClass('current-selection');
+    this.setState({
+      selection: selection
+    })
+  },
   render() {
     return (
-      <div className='chart'>
-        <ChartHeader title="Hey"/>
-        <BarChart data={this.state.data} selection={this.state.selection} />
+      <div id='viz'>
+        <ChartHeader />
+        <UserSelect selection={this.state.selection} handleSelect={this.handleUserSelect} />
+        { this.state.data.length != 0 ? <BarChart data={this.state.data} selection={this.state.selection} /> : null }
       </div>
     )
   }
