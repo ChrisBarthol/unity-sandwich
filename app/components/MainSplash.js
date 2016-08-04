@@ -19,7 +19,7 @@ function MainSplash (props) {
                 <h1 id="main-title" className="fadeInDown animated" style={splashContentH1}>Unity Sandwiches</h1>
                 <h4 className="fadeInUp animated" style={splashContentH4}>To have, to hold, and to eat.</h4>
                 <div id="to-viz-container" style={toVizContainer}>
-                  <Link to="next-section">
+                  <Link to="/#next-section">
                     <i className="fa fa-arrow-down" style={nextSection}></i>
                   </Link>
                 </div>

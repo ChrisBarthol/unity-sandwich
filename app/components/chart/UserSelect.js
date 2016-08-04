@@ -6,7 +6,7 @@ var UserSelect = React.createClass({
       <div className='row text-center'>
         <div className='col-md-12'>
           <div id='user-select-dropdown' className='dropdown'>
-            <button className='btn btn-default dropdown-toggle' type='button' id='user-select' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
+            <button className='btn btn-default dropdown-toggle' type='button' id='user-select' dataToggle='dropdown' ariaHaspopup='true' ariaExpanded='true'>
               <span id='select-text'>Avg Temp (ºF)</span> <span className='caret'></span>
             </button>
             <ul onClick={this.props.handleSelect} className='dropdown-menu' aria-labelledby='user-select'>

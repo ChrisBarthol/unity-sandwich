@@ -68,7 +68,7 @@ var BarChart = React.createClass({
     this.drawLineChart('line-chart', this.lineData(this.props.selection, this.keyToYearThenMonth(this.props.data)));
   },
   componentDidUpdate: function() {
-    this.updateLineChart('line-chart', this.lineData(this.props.selection, this.keyToYearThenMonth(this.props.data)));
+    this.drawLineChart('line-chart', this.lineData(this.props.selection, this.keyToYearThenMonth(this.props.data)));
   },
   render: function() {
     return (
