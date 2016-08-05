@@ -1,8 +1,12 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html',
   filename: 'index.html',
   inject: 'body'
+});
+var ExtractTextPluginConfig = new ExtractTextPlugin('app.css', {
+  allChunks: true
 });
 module.exports = {
   entry: [
@@ -16,8 +20,12 @@ module.exports = {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
       {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192', include: /img/ },
-      {test: /\.csv$/, loader: 'dsv-loader'}
+      {test: /\.csv$/, loader: 'dsv-loader'},
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
+      }
     ]
   },
-  plugins: [HTMLWebpackPluginConfig]
+  plugins: [HTMLWebpackPluginConfig, ExtractTextPluginConfig]
 };
