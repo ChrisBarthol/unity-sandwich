@@ -11,14 +11,9 @@ function Home () {
   return (
     <div>
       <MainSplash />
+      <h1 className='text-center'>The Data</h1>
+      <p className='lead text-center'>Average love of sandwiches corresponds well with wedding season</p>
       <Chart />
-      <div id='next-section' className="jumbtotron col-sm-12 text-center" style={transparentBg}>
-        <h1>Unity Sandwich</h1>
-        <p className='lead'> Sandwhiches are the best</p>
-        <Link to='/unityName'>
-          <button type='button' className='btn btn-lg btn-success'>Send Us Your Thoughts</button>
-        </Link>
-      </div>
     </div>
   )
 }
