@@ -7,12 +7,11 @@ var options = [
   { value: 'avg_temp_f', label: 'Avg Sandwich Love' },
   { value: 'avg_min_temp_f', label: 'Avg Night Sandwich Love' },
   { value: 'avg_max_temp_f', label: 'Avg Daytime Sandwich Love' },
-  { value: 'total_percipitation_in', label: 'Total Sandwiches' },
-  { value: 'total_snowfall_in', label: 'Extra Sandwiches' },
+  // { value: 'total_percipitation_in', label: 'Total Sandwiches' },
+  // { value: 'total_snowfall_in', label: 'Extra Sandwiches' },
 ]
 
 var Chart = React.createClass({
-
 
   getInitialState () {
     return {
@@ -38,6 +37,8 @@ var Chart = React.createClass({
   render() {
     return (
       <div id='viz'>
+        <h1 className='text-center'>The Data</h1>
+        <p className='lead text-center'>Average love of sandwiches corresponds well with wedding season</p>
         <ChartHeader />
         <div className='row text-center'>
           <div className="col-md-4"></div>
