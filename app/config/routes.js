@@ -22,10 +22,8 @@ var routes = (
   <Router history={browserHistory} onUpdate={hashLinkScroll}>
     <Route path='/' component={Main}>
       <IndexRoute component={Home} />
-      <Route path='unityName'
-        header='Your Name'
-        placeholderText='Enter Your Name'
-        textType='text'
+      <Route path='unityForm'
+        header='Fill our our Unity Form'
         component={PromptContainer} />
       <Route path='unityThoughts/:unityName'
         header='Your Thoughts'
