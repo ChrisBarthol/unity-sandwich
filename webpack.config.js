@@ -22,9 +22,9 @@ module.exports = {
       {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192', include: /img/ },
       {test: /\.csv$/, loader: 'dsv-loader'},
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
-      }
+     test: /\.css$/,
+     loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+      },
     ]
   },
   plugins: [HTMLWebpackPluginConfig, ExtractTextPluginConfig]
