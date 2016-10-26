@@ -1,6 +1,4 @@
-.white {
-  color: #fff;
-}
+
 
 footer {
   background: #333;
@@ -8,10 +6,6 @@ footer {
   flex-grow: 0%;
   flex-shrink: 0;
   flex-basis: auto;
-}
-
-.body {
-  font-family: 'Catamaran', sans-serif;
 }
 
 .footerWrapper {
@@ -68,16 +62,4 @@ footer {
   float: right;
   font-size: 3em;
   margin-right:20px;
-}
-
-.veritcal-center {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 90%;
-  transform: translateY(-50%);
-  font-size: 20px;
-  line-height: 150%;
 }

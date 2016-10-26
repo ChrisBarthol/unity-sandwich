@@ -1,0 +1,19 @@
+.small-text {
+  font-size: .7em;
+}
+
+.white {
+  color: #fff;
+}
+
+.veritcal-center {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  line-height: 150%;
+}
